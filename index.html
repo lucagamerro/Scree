@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="http://scree.surge.sh/media/scree.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">    <title>Scree</title>
+    <script src="./settings.js"></script>
+    <script src="./fun.js"></script>
+</head>
+<body>
+    <div id="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modal').style.display = 'none'">&times;</span>
+            <h1>Benvenuto su Scree!</h1>
+            <p>Ecco le cose consiglio di fare per sfruttare al meglio quest'applicaizone:</p>
+            <li>Aggiungi Scree alla barra dei preferiti</li>
+            <li>Modifica il file di configurazione a tuo piacimento. Lo trovi in /Scree/settings.js</li>
+            <li>Nel file inserisci la città della quale sarà visualizzato il meteo</li>
+            <li>Se non ti piace qualche funzione puoi disattivarla inserendola tra "/*" e "*/" la parte di codice</li>
+            <li>Alla fine sarai pronto ad utilizzare il tuo gestore di pagine! </li>
+            <p>Scopri di più su questo progetto su <a href="https://github.com/lucagamerro" target="_blanck">Github.</a></p>
+        </div>
+    </div>
+    
+    <div id="preferiti">
+        <div title="help" onclick="document.getElementById('modal').style.display = 'block'">❓</div>
+    </div>
+
+    <div id="app">
+        <h1 id="saluto"> <div id="giorno">Buon giorno</div> </h1>
+        <h1 id="gradi"></h1>
+        <img id="imm" width="100">
+    </div>
+
+    <div id="fondo">
+        <h1>
+            <div id="tenda" style="display: none;"> </div>
+            <div id="lista">
+                <p> <div id="uno" title="whatsapp" onclick="tendina('uno', '2.8%')">💬</div> 
+                <div id="due" title="due" onclick="tendina('due', '5.4%')">📰</div> 
+                <div id="tre" title="tre" onclick="tendina('tre', '8.3%')">🏐</div> 
+                <div id="quattro" title="quattro" onclick="tendina('quattro', '11%')">👓</div> 
+                </p>
+            </div>
+            <div id="ora" title="sei in ritardo"></div>
+        </h1>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
