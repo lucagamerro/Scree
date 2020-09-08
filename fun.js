@@ -138,8 +138,14 @@ function tendina( quale, margin ) {
   }
   else if (tenda.style.display === "none") {
     tenda.style.display = "block";
-    tenda.style.marginTop = "7.8%";
-    lista.style.marginTop = "0.2%";
+    if (screen.width >= 1600) {
+      tenda.style.marginTop = "8.25%";
+      lista.style.marginTop = "0.2%";
+    }
+    else {
+      tenda.style.marginTop = "7.8%";
+      lista.style.marginTop = "0.2%";
+    }
   }
 }
 
